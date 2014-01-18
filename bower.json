@@ -1,0 +1,8 @@
+{
+  "name": "nucleus-angular-data-validation",
+  "version": "0.2.2",
+  "dependencies": {},
+  "devDependencies": {
+    "lodash": "2.x.x"
+  }
+}
