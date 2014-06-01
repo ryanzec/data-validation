@@ -1,3 +1,7 @@
+if(typeof module != 'undefined') {
+  var _ = require('lodash');
+}
+
 var dataValidation = (function() {
   var validators = {
     email: function(value){
@@ -78,3 +82,7 @@ var dataValidation = (function() {
     }
   };
 }());
+
+if(typeof module != 'undefined') {
+  module.exports = dataValidation;
+}
