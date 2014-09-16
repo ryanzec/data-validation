@@ -11,7 +11,7 @@ var dataValidation = (function() {
 
     notEmpty: function(value){
       var test = value;
-      return (test != 0 && test != undefined);
+      return (test !== '' && test !== undefined && test !== null);
     },
 
     minValue: function(value, minValue){

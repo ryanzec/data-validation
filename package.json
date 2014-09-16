@@ -23,9 +23,13 @@
     "lodash": "2.4.1"
   },
   "devDependencies": {
-    "karma": "0.12.16",
+    "karma": "0.12.23",
     "karma-phantomjs-launcher": "0.1.4",
-    "mocha": "1.18.2",
+    "karma-mocha": "0.1.9",
+    "karma-chai": "0.1.0",
+    "karma-sinon": "1.0.3",
+    "mocha": "1.20.1",
+    "sinon": "1.10.3",
     "chai": "1.9.1"
   },
   "engines": {

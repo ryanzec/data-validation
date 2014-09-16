@@ -1,6 +1,3 @@
-var expect = require('chai').expect;
-var dataValidation = require('../data-validation');
-
 describe('Data Validation', function(){
   describe("Basic Functionality", function() {
     it('should be able to add a validator', function() {
@@ -25,6 +22,10 @@ describe('Data Validation', function(){
 
     it('should validate null as empty', function() {
       expect(dataValidation.validate('notEmpty', null)).to.be.false;
+    });
+
+    it('should validate 0 as not empty', function() {
+      expect(dataValidation.validate('notEmpty', 0)).to.be.true;
     });
 
     it('should validate 20 as not less than 10', function() {
