@@ -1,4 +1,7 @@
-describe('Data Validation', function(){
+describe('Data Validation', function() {
+  var dataValidation = require('../data-validation');
+  var expect = require('chai').expect;
+
   describe("Basic Functionality", function() {
     it('should be able to add a validator', function() {
       dataValidation.add('test', function(value1) {
