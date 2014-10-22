@@ -1,4 +1,4 @@
-if(typeof module != 'undefined') {
+if(typeof module !== 'undefined' && module.exports) {
   var _ = require('lodash');
 }
 
@@ -83,6 +83,6 @@ var dataValidation = (function() {
   };
 }());
 
-if(typeof module != 'undefined') {
+if(typeof module !== 'undefined' && module.exports) {
   module.exports = dataValidation;
 }
