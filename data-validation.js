@@ -1,6 +1,4 @@
-if(typeof module !== 'undefined' && module.exports) {
-  var _ = require('lodash');
-}
+var utilities = require('./utilities');
 
 var dataValidation = (function() {
   var validators = {
@@ -16,33 +14,33 @@ var dataValidation = (function() {
 
     minValue: function(value, minValue){
       var value = parseInt(value)
-      return (!_(value).isNaN() && value >= minValue);
+      return (utilities.isNumber(value) && value >= minValue);
     },
 
     maxValue: function(value, maxValue){
       var value = parseInt(value)
-      return (!_(value).isNaN() && value <= maxValue);
+      return (utilities.isNumber(value) && value <= maxValue);
     },
 
     rangeValue: function(value, minValue, maxValue){
       var value = parseInt(value)
-      return (!_(value).isNaN() && value >= minValue && value <= maxValue);
+      return (utilities.isNumber(value) && value >= minValue && value <= maxValue);
     },
 
     minLength: function(value, minValue){
-      return (_(value).isString() && value.length >= minValue);
+      return (utilities.isString(value) && value.length >= minValue);
     },
 
     maxLength: function(value, maxValue){
-      return (_(value).isString() && value.length <= maxValue);
+      return (utilities.isString(value) && value.length <= maxValue);
     },
 
     rangeLength: function(value, minValue, maxValue){
-      return (_(value).isString() && value.length >= minValue && value.length <= maxValue);
+      return (utilities.isString(value) && value.length >= minValue && value.length <= maxValue);
     },
 
     match: function(value1, value2){
-      return _(value1).isEqual(value2);
+      return value1 === value2;
     },
 
     custom: function(callback) {
@@ -83,6 +81,4 @@ var dataValidation = (function() {
   };
 }());
 
-if(typeof module !== 'undefined' && module.exports) {
-  module.exports = dataValidation;
-}
+module.exports = dataValidation;
