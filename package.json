@@ -26,7 +26,7 @@
     "chai": "1.9.1"
   },
   "engines": {
-    "node": ">=0.11.10"
+    "node": ">=0.10.33"
   },
   "main": "data-validation.js"
 }
